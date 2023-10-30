@@ -1,0 +1,297 @@
+{
+    "prefix": {
+        "default": "https://github.com/mariusschlegel/mlflow2prov/"
+    },
+    "entity": {
+        "Experiment?experiment_id\\=0&name\\=Default": {
+            "experiment_id": "0",
+            "name": "Default",
+            "artifact_location": "file:///home/lucadavi/Documents/m2p-test/simple-example/mlruns/0",
+            "lifecycle_stage": "active",
+            "prov:type": [
+                "Experiment",
+                {
+                    "$": "prov:collection",
+                    "type": "prov:QUALIFIED_NAME"
+                }
+            ]
+        },
+        "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713": {
+            "run_id": "8172fedd990045a983058d790429861e",
+            "name": "bedecked-stork-713",
+            "status": "finished",
+            "lifecycle_stage": "active",
+            "artifact_uri": "file:///home/lucadavi/Documents/m2p-test/simple-example/mlruns/0/8172fedd990045a983058d790429861e/artifacts",
+            "prov:type": [
+                "Run",
+                {
+                    "$": "prov:collection",
+                    "type": "prov:QUALIFIED_NAME"
+                }
+            ]
+        },
+        "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=train_loss&step\\=99": {
+            "name": "train_loss",
+            "value": {
+                "$": 0.02479521557688713,
+                "type": "xsd:double"
+            },
+            "timestamp": {
+                "$": "2023-10-26T17:17:38.302000+00:00",
+                "type": "xsd:dateTime"
+            },
+            "step": {
+                "$": 99,
+                "type": "xsd:int"
+            },
+            "prov:type": "Metric"
+        },
+        "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=test_loss&step\\=99": {
+            "name": "test_loss",
+            "value": {
+                "$": 0.05687814950942993,
+                "type": "xsd:double"
+            },
+            "timestamp": {
+                "$": "2023-10-26T17:17:38.302000+00:00",
+                "type": "xsd:dateTime"
+            },
+            "step": {
+                "$": 99,
+                "type": "xsd:int"
+            },
+            "prov:type": "Metric"
+        },
+        "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=epochs": {
+            "name": "epochs",
+            "value": "100",
+            "prov:type": "Param"
+        },
+        "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=lr": {
+            "name": "lr",
+            "value": "0.01",
+            "prov:type": "Param"
+        },
+        "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.user": {
+            "name": "mlflow.user",
+            "value": "lucadavi",
+            "prov:type": "RunTag"
+        },
+        "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.name": {
+            "name": "mlflow.source.name",
+            "value": "/home/lucadavi/Documents/m2p-test/simple-example/pytorch_example.py",
+            "prov:type": "RunTag"
+        },
+        "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.type": {
+            "name": "mlflow.source.type",
+            "value": "LOCAL",
+            "prov:type": "RunTag"
+        },
+        "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.git.commit": {
+            "name": "mlflow.source.git.commit",
+            "value": "ce566edb78980de8f239fa52f01da830993c2eb2",
+            "prov:type": "RunTag"
+        },
+        "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.runName": {
+            "name": "mlflow.runName",
+            "value": "bedecked-stork-713",
+            "prov:type": "RunTag"
+        }
+    },
+    "activity": {
+        "Creation?uid\\=0&resource_type\\=Experiment": {
+            "prov:startTime": "2023-10-26T17:17:37.801000+00:00",
+            "prov:endTime": "2023-10-26T17:17:37.801000+00:00",
+            "uid": "0",
+            "prov:type": "Creation"
+        },
+        "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run": {
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00",
+            "prov:endTime": "2023-10-26T17:17:38.302000+00:00",
+            "uid": "8172fedd990045a983058d790429861e",
+            "prov:type": "Creation"
+        },
+        "Commit?sha\\=ce566edb78980de8f239fa52f01da830993c2eb2": {
+            "prov:startTime": "2023-10-26T16:29:15+02:00",
+            "prov:endTime": "2023-10-26T16:29:15+02:00",
+            "sha": "ce566edb78980de8f239fa52f01da830993c2eb2",
+            "title": "example commit",
+            "message": "example commit\n",
+            "authored_at": {
+                "$": "2023-10-26T16:29:15+02:00",
+                "type": "xsd:dateTime"
+            },
+            "committed_at": {
+                "$": "2023-10-26T16:29:15+02:00",
+                "type": "xsd:dateTime"
+            },
+            "prov:type": "Commit"
+        }
+    },
+    "agent": {
+        "User?name\\=&email\\=": {
+            "name": "",
+            "email": "",
+            "username": "lucadavi",
+            "prov:type": "User"
+        }
+    },
+    "wasGeneratedBy": {
+        "_:id1": {
+            "prov:entity": "Experiment?experiment_id\\=0&name\\=Default",
+            "prov:activity": "Creation?uid\\=0&resource_type\\=Experiment",
+            "prov:startTime": "2023-10-26T17:17:37.801000+00:00",
+            "prov:role": "AddedExperiment"
+        },
+        "_:id3": {
+            "prov:entity": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id6": {
+            "prov:entity": "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=train_loss&step\\=99",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id9": {
+            "prov:entity": "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=test_loss&step\\=99",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id12": {
+            "prov:entity": "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=epochs",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id15": {
+            "prov:entity": "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=lr",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id18": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.user",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id21": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.name",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id24": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.type",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id27": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.git.commit",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        },
+        "_:id30": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.runName",
+            "prov:activity": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:role": "AddedRun",
+            "prov:startTime": "2023-10-26T17:17:37.890000+00:00"
+        }
+    },
+    "hadMember": {
+        "_:id2": {
+            "prov:collection": "Experiment?experiment_id\\=0&name\\=Default",
+            "prov:entity": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713"
+        },
+        "_:id5": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=train_loss&step\\=99"
+        },
+        "_:id8": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=test_loss&step\\=99"
+        },
+        "_:id11": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=epochs"
+        },
+        "_:id14": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=lr"
+        },
+        "_:id17": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.user"
+        },
+        "_:id20": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.name"
+        },
+        "_:id23": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.type"
+        },
+        "_:id26": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.git.commit"
+        },
+        "_:id29": {
+            "prov:collection": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.runName"
+        }
+    },
+    "wasAttributedTo": {
+        "_:id4": {
+            "prov:entity": "Run?run_id\\=8172fedd990045a983058d790429861e&name\\=bedecked-stork-713",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id7": {
+            "prov:entity": "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=train_loss&step\\=99",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id10": {
+            "prov:entity": "Metric?run_id\\=8172fedd990045a983058d790429861e&name\\=test_loss&step\\=99",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id13": {
+            "prov:entity": "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=epochs",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id16": {
+            "prov:entity": "Param?run_id\\=8172fedd990045a983058d790429861e&name\\=lr",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id19": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.user",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id22": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.name",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id25": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.type",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id28": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.source.git.commit",
+            "prov:agent": "User?name\\=&email\\="
+        },
+        "_:id31": {
+            "prov:entity": "RunTag?run_id\\=8172fedd990045a983058d790429861e&name\\=mlflow.runName",
+            "prov:agent": "User?name\\=&email\\="
+        }
+    },
+    "wasInformedBy": {
+        "_:id32": {
+            "prov:informed": "Creation?uid\\=8172fedd990045a983058d790429861e&resource_type\\=Run",
+            "prov:informant": "Commit?sha\\=ce566edb78980de8f239fa52f01da830993c2eb2"
+        }
+    }
+}

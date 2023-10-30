@@ -1,8 +1,6 @@
-extract:
-  repository_path: "/home/lucadavi/Documents/m2p-test/simple-example"
-  mlflow_url: "http://localhost:5000"
-transform:
-  eliminate_duplicates: true
-save: 
-  output: output/output
-  format: [json, dot]
+- extract:
+        repository_path: "/home/lucadavi/Documents/m2p-test/simple-example/.git"
+        mlflow_url: "http://localhost:5000"
+- save:
+        output: /home/lucadavi/Documents/m2p-test/simple-example/output/output
+        format: [json, provn, rdf, xml, dot]

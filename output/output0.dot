@@ -1,0 +1,66 @@
+digraph G {
+charset="utf-8";
+rankdir=BT;
+n1 [URL="https://github.com/mariusschlegel/mlflow2prov/Experiment?experiment_id=0&name=Default", color="#808080", fillcolor="#FFFC87", label="Experiment?experiment_id=0&name=Default", shape=oval, style=filled];
+ann1 [color=gray, fontcolor=black, fontsize=10, label=<<TABLE cellpadding="0" border="0">
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#type">prov:type</TD>
+        <TD align="left">Experiment</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#type">prov:type</TD>
+        <TD align="left" href="http://www.w3.org/ns/prov#collection">prov:collection</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="https://github.com/mariusschlegel/mlflow2prov/artifact_location">artifact_location</TD>
+        <TD align="left">mlflow-artifacts:/0</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="https://github.com/mariusschlegel/mlflow2prov/experiment_id">experiment_id</TD>
+        <TD align="left">0</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="https://github.com/mariusschlegel/mlflow2prov/lifecycle_stage">lifecycle_stage</TD>
+        <TD align="left">active</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="https://github.com/mariusschlegel/mlflow2prov/name">name</TD>
+        <TD align="left">Default</TD>
+    </TR>
+    </TABLE>>, shape=note];
+ann1 -> n1  [arrowhead=none, color=gray, style=dashed];
+n2 [URL="https://github.com/mariusschlegel/mlflow2prov/Creation?uid=0&resource_type=Experiment", color="#0000FF", fillcolor="#9FB1FC", label="Creation?uid=0&resource_type=Experiment", shape=box, style=filled];
+ann2 [color=gray, fontcolor=black, fontsize=10, label=<<TABLE cellpadding="0" border="0">
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#startTime">prov:startTime</TD>
+        <TD align="left">2023-10-26T17:41:48.692000+00:00</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#endTime">prov:endTime</TD>
+        <TD align="left">2023-10-26T17:41:48.692000+00:00</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#type">prov:type</TD>
+        <TD align="left">Creation</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="https://github.com/mariusschlegel/mlflow2prov/uid">uid</TD>
+        <TD align="left">0</TD>
+    </TR>
+    </TABLE>>, shape=note];
+ann2 -> n2  [arrowhead=none, color=gray, style=dashed];
+b1 [color=gray, label="", shape=point];
+n1 -> b1  [arrowhead=none, color=darkgreen, fontcolor=darkgreen, fontsize="10.0", label=wasGeneratedBy];
+b1 -> n2  [color=darkgreen, fontcolor=darkgreen, fontsize="10.0"];
+ann3 [color=gray, fontcolor=black, fontsize=10, label=<<TABLE cellpadding="0" border="0">
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#role">prov:role</TD>
+        <TD align="left">AddedExperiment</TD>
+    </TR>
+    <TR>
+        <TD align="left" href="http://www.w3.org/ns/prov#startTime">prov:startTime</TD>
+        <TD align="left">2023-10-26T17:41:48.692000+00:00</TD>
+    </TR>
+    </TABLE>>, shape=note];
+ann3 -> b1  [arrowhead=none, color=gray, style=dashed];
+}

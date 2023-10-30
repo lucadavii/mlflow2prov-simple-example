@@ -1,6 +1,8 @@
 import torch
 from torch import nn
 import mlflow
+from mlflow.models import infer_signature
+import numpy as np
 
 MANUAL_SEED=42
 
@@ -20,15 +22,6 @@ train_split = int(0.8*len(X))
 X_train, y_train = X[:train_split], y[:train_split]
 X_test, y_test = X[train_split:], y[train_split:]
 
-# def plot_predictions (train_data = X_train, train_labels = y_train, test_data = X_test, test_labels = y_test, predictions = None):
-#     plt.figure(figsize=(10,7))
-#     plt.scatter(train_data,train_labels, c="b", s=4, label="Training data")
-#     plt.scatter(test_data,test_labels, c="g", s=4, label="Testing data")
-
-#     if predictions is not None:
-#         plt.scatter(test_data, predictions, c="r", s=4, label="Predictions")
-#     plt.legend(prop={"size":14})
-#     plt.show()
 class LinearRegressionModel(nn.Module):
     def __init__(self):
         super().__init__()
@@ -75,5 +68,6 @@ with mlflow.start_run() as run:
             "train_loss":loss.item(),
             "test_loss":test_loss.item()
         },epoch)
-    torch.save(model_0,'model.pt')
-    mlflow.log_artifact('model.pt')
+    #infer signature and save model as artifact
+    signature= infer_signature(X.numpy(), model_0(X).detach().numpy())
+    model_info = mlflow.pytorch.log_model(model_0, "model",signature=signature)
